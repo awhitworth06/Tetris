@@ -9,5 +9,4 @@ Tetris built on HTML, CSS &amp; JS
 - Click Start/Pause to pause a game.
 - Click Restart to start a new game.
 
-![image](https://user-images.githubusercontent.com/37915036/109737303-cc202600-7b93-11eb-8d04-1f1f40907637.png)
-
+![image](https://user-images.githubusercontent.com/37915036/109738865-a8121400-7b96-11eb-8533-25ba57ee7dde.png)
