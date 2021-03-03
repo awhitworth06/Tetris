@@ -1,0 +1,208 @@
+body {
+  min-width: 500px;
+  background: rgba(255,214,235,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,214,235,1) 0%, rgba(254,72,166,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,214,235,1)), color-stop(100%, rgba(254,72,166,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,214,235,1) 0%, rgba(254,72,166,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,214,235,1) 0%, rgba(254,72,166,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,214,235,1) 0%, rgba(254,72,166,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255,214,235,1) 0%, rgba(254,72,166,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd6eb', endColorstr='#fe48a6', GradientType=1 );
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-img {
+  margin-top: 25px;
+  max-width: 100%;
+  height: auto;
+  border: 8px solid lightslategrey;
+  border-radius: 20%;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.25), 0 17px 50px 0 rgba(0,0,0,0.20);
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.grid {
+  width: 300px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  background: cyan;
+  border: 4px solid lightslategrey;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 4px rgba(0,0,0,0.4);
+}
+
+.grid div {
+  width: 28px;
+  height: 28px;
+  border: 1px solid cyan;
+  border-radius: 25%;
+  box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+.tetromino {
+  border-color: lightslategray !important;
+}
+
+#bottom-grid {
+  margin-top: 4px;
+  background: white;
+  border: 1px solid lightslategrey;
+  border-radius: 25%;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.4);
+}
+
+.right-pane {
+  margin-left: 50px;
+}
+
+.mini-grid {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  background: cyan;
+  border: 4px solid lightslategrey;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 4px rgba(0,0,0,0.4);
+}
+
+.mini-grid div {
+  width: 28px;
+  height: 28px;
+  border: 1px solid cyan;
+  border-radius: 25%;
+  box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+.control-panel {
+  margin-top: 50px;
+}
+
+h3 {
+  margin-top: 50px;
+  background: white;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px 4px rgba(0,0,0,0.4);
+  color: dimgray;
+}
+
+.options {
+  margin-top: 25px;
+  display: block;
+  position: relative;
+  padding-top: 5px;
+  padding-left: 35px;
+  color: dimgray;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.options input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background: white;
+}
+.options:hover input ~ .checkmark {
+  background: lightgrey;
+}
+
+.options input:checked ~ .checkmark {
+  background: dimgray;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.options input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.options .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.buttons {
+  margin-top: 50px;
+}
+
+.button {
+  position: relative;
+  margin-top: 25px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  background: palevioletred;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5%;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+} 
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:after {
+  content: "";
+  background: white;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -60px !important;
+  margin-top: -240%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
